@@ -3,7 +3,7 @@ import java.nio.file.Files
 rootProject.name = "reproducer-project"
 
 //code to create the reproducer subprojects
-(1..10000).forEach {
+(1..1000).forEach {
     val projectName = "project$it"
     val projectDir = Files.createDirectories(settings.rootDir.toPath().resolve("subprojects/$projectName"))
     include(":$projectName")
